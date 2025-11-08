@@ -9,5 +9,6 @@ if (heroHeading) {
     else if (hours < 18) greeting = "Good afternoon! ";
     else greeting = "Good evening! ";
 
-    heroHeading.textContent = `${greeting}Learn Practical AI & ML in Algeria`;
+    heroHeading.textContent = `${greeting}Apprenez l’IA et le ML de manière pratique en Algérie`;
+
 }
