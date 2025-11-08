@@ -20,6 +20,12 @@ header {
   background: #e6f2f1; /* light teal background for header */
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+header h1 img {
+  display: inline-block;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 
 header h1 {
   display: flex;
