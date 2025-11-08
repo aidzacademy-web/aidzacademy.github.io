@@ -1,59 +1,138 @@
+/* Reset basic styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Arial', sans-serif;
-  margin: 0;
-  background: #0b1220;
-  color: #e6eef8;
+  background: #ffffff; /* white background for logo visibility */
+  color: #043927;      /* dark teal text for readability */
   line-height: 1.6;
 }
+
+/* Header */
 header {
-  background: #0f1724;
-  padding: 16px 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #e6f2f1; /* light teal background for header */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
 header h1 {
-  color: #4f46e5;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #043927; /* dark teal for text */
 }
-nav a {
-  color: #e6eef8;
+
+/* Logo style inline or svg */
+header h1 .logo-text {
+  margin-left: 10px;
+}
+
+header nav a {
+  color: #043927;
   text-decoration: none;
-  margin-left: 18px;
+  margin-left: 20px;
   font-weight: 600;
 }
+
+header nav a:hover {
+  color: #28a745; /* bright green accent */
+}
+
+/* Hero section */
 .hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #d9f5f1, #b2e5db); /* soft teal gradient */
+  border-bottom: 2px solid #28a745; /* accent line */
 }
+
+.hero h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #043927;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 16px 0;
+  color: #065f4f;
+}
+
 .cta {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: #4f46e5;
-  color: #fff;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background: #28a745; /* vibrant green */
+  color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
+
+.cta:hover {
+  background: #1f8f3e; /* slightly darker green */
+}
+
+/* Features / Courses section */
 .features, .course-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  gap: 24px;
+  padding: 40px 20px;
   justify-content: center;
 }
+
 .card, .course {
-  background: rgba(255,255,255,0.03);
+  background: #e6f2f1; /* light teal */
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   flex: 1 1 250px;
   max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover, .course:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h3, .course h3 {
+  color: #043927;
+  margin-bottom: 12px;
+}
+
+.card p, .course p {
+  color: #065f4f;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #0f1724;
-  margin-top: 30px;
+  padding: 24px 20px;
+  background: #e6f2f1;
+  color: #043927;
   font-size: 14px;
+  border-top: 2px solid #28a745;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .features, .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
